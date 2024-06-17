@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.carrousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carrousel {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+.list p {
+    transition: font-weight 0.2s, text-decoration 0.2s;
+}
+.list p:hover {
+    color: black;
+    text-decoration: underline;
+}

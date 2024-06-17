@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./input.css">
+    <link rel="icon" type="image/png" href="./Image/airbnb-logo.png">
+    <title>Airbnb Clone</title>
+</head>
+<body class="bg-[#e7e7e2]">
+    <div class="box ">
+        <h1 class="text-base font-semibold text-center my-4 font-sans underline">Learn more about icons</h1>
+        <div class="main rounded-t-2xl bg-white absolute w-full md:mx-0">
+            <div class="navbar">
+                <div class="nav-main hidden md:flex justify-between px-10 py-5">
+                    <div class="logo w-2/5">
+                        <img class="logo w-[36px] h-[36px] lg:hidden" src="./Image/airbnb-logo.png" alt="Airbnb Logo">
+                        <img class="logo w-[110px] h-[36px] hidden lg:block" src="./Image/AIRBNB_LOGO_WITH_NAME.png" alt="Airbnb Logo">
+                    </div>
+                    
+
+                    <div class="exp hidden lg:flex justify-start items-center my-4 w-[30%]">
+                        <h1 class="text-base cursor-pointer mx-3">Stays</h1>
+                        <h1 class="text-base cursor-pointer mx-3">Experiences</h1>
+                        <h1 class="text-base cursor-pointer mx-3">Online Experiences</h1>
+                    </div>
+
+                    <div class="navContent flex justify-end items-center w-[30%]">
+                        <h1 class="mx-2">Airbnb your home</h1>
+                        <img class="w-[16px] h-[16px] mx-2" src="./Image/internet.png" alt="Global">
+                        <div class="navSubContent mx-2 pr-2 py-1 flex justify-center items-center border border-slate-400 w-fit rounded-full">
+                            <div class="hamburger inline-block px-3 cursor-pointer">
+                                <div class="line h-0.5 w-3 my-0.5 bg-black"></div>
+                                <div class="line h-0.5 w-3 my-0.5 bg-black"></div>
+                                <div class="line h-0.5 w-3 my-0.5 bg-black"></div>
+                            </div>
+                            <img src="./Image/account.png" alt="Account">
+                        </div>
+                    </div>
+                </div>
+                <div class="exp hidden md:flex justify-center items-center my-4 lg:hidden">
+                    <h1 class="text-base cursor-pointer mx-3">Stays</h1>
+                    <h1 class="text-base cursor-pointer mx-3">Experiences</h1>
+                    <h1 class="text-base cursor-pointer mx-3">Online Experiences</h1>
+                </div>
+
+                
+                <!-- Search -->
+                <div class="search my-3 shadow-md rounded-full mx-6 flex justify-center items-center border sticky lg:w-3/5 lg:mx-auto">
+                    <img class="w-[20px] h-[20px] mx-5 my-4 md:hidden" src="./Image/search.png" alt="Search">
+                    <div class="searchHead md:w-[35%] mx-4 my-2 md:hidden">
+                        <h1 class="text-sm font-semibold">Where to?</h1>
+                        <p class="text- text-gray-700">Anywhere  -  Any week  -  Add guests</p>
+                    </div>
+
+                    <div class="mainsearch hidden md:flex justify-center items-center md:w-full">
+                        <div class="rounded-full w-[40%] hover:bg-[#e7e7e2]">
+                            <div class="pl-4 border-r-2 border-slate-300 my-2" id="border-div">
+                                <h1 class="text-sm font-semibold">Where to?</h1>
+                                <input id="search-input" class="text-gray-700 focus:border-none focus:bg-[#e7e7e2]" placeholder="Anywhere  -  Any week  -  Add guest">
+                            </div>
+                        </div>
+                        <div class="rounded-full w-[15%] hover:bg-[#e7e7e2]">
+                            <div class=" pl-4 border-r-2 border-slate-300 my-2">
+                                <h1 class="text-sm font-semibold">Check in</h1>
+                                <p class="text- text-gray-400">Add dates</p>
+                            </div>
+                        </div>
+                        <div class="rounded-full w-[15%] hover:bg-[#e7e7e2]">
+                            <div class=" pl-4 border-r-2 border-slate-300 my-2">
+                                <h1 class="text-sm font-semibold">Check out</h1>
+                                <p class="text- text-gray-400">Add dates</p>
+                            </div>
+                        </div>
+                        <div class="rounded-full w-[30%] hover:bg-[#e7e7e2] flex justify-between items-center">
+                            <div class="pl-4 my-2">
+                                <h1 class="text-sm font-semibold">Who</h1>
+                                <p class="text- text-gray-400">Add guest</p>
+                            </div>
+                            <div class="searchIcon mr-2 w-[50px] h-[50px] flex justify-center items-center rounded-full bg-red-500">
+                                <img class="w-[16px] h-[16px]" src="./Image/magnifying-glass.png" alt="Search">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+            <div class="category mx-10 relative my-10">
+                <button class="left-arrow absolute top-1/2 left-0 transform rounded-full -translate-y-1/2 bg-white p-2 hover:shadow-xl border-2 border-slate-200"><img class="w-[10px] h-[10px]" src="./Image/left.png" alt="left-arrow"></button>
+                <button class="right-arrow absolute top-1/2 right-0 transform rounded-full -translate-y-1/2 bg-white p-2 hover:shadow-xl border-2 border-slate-200"><img class="w-[10px] h-[10px]" src="./Image/Right.png" alt="Right-arrow"></button>
+                <div class="carrousel grid grid-flow-col scroll-auto gap-5 overflow-y-auto overscroll-x-contain snap-mandatory max-w-none">
+                    
+                    <div class="item flex justify-center items-center flex-col snap-start w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center w-fit"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Icons.webp" alt="Icons">Icons</p>
+                    </div>
+                    <div class="item flex justify-center items-center flex-col snap-start w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center "><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Amazing Pools.jpg" alt="Amazing Pools">Amazing Pools</p>
+                    </div>
+                    <div class="item flex snap-start justify-center items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Castles.jpg" alt="Castles">Castles</p>
+                    </div>
+                    <div class="item flex justify-center items-center flex-col snap-start w-[120px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Top of the world.jpg" alt="Top of the world">Top of the world</p>
+                    </div>
+                    <div class="item flex justify-center snap-start items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/lakefront.jpg" alt="lakefront">lakefront</p>
+                    </div>
+                    <div class="item flex justify-center snap-start items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Amazing View.jpg" alt="Amazing View">Amazing View</p>
+                    </div>
+                    <div class="item flex justify-center items-center flex-col snap-start w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Treehouse.jpg" alt="Treehouse">Treehouse</p>
+                    </div>
+                    <div class="item flex snap-start justify-center items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Beach.jpg" alt="Beach">Beach</p>
+                    </div>
+                    <div class="item flex justify-center items-center flex-col snap-start w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/OMG!.jpg" alt="OMG">OMG!</p>
+                    </div>
+                    <div class="item flex snap-start justify-center items-center flex-col  w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Cabines.jpg" alt="Cabines">Cabines</p>
+                    </div>
+                    <div class="item flex snap-start justify-center items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Mansions.jpg" alt="Mansions">Mansions</p>
+                    </div>
+                    <div class="item flex snap-start justify-center items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Farms.jpg" alt="Farms">Farms</p>
+                    </div>
+                    <div class="item flex justify-center items-center flex-col snap-start w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Islands.jpg" alt="Islands">Islands</p>
+                    </div>
+                    <div class="item flex snap-start justify-center items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Luxe.jpg" alt="Luxe">Luxe</p>
+                    </div>
+                    <div class="item flex justify-center items-center flex-col snap-start w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Trending.jpg" alt="Trending">Trending</p>
+                    </div>
+                    <div class="item flex  snap-start justify-center items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Tropical.jpg" alt="Tropical">Tropical</p>
+                    </div>
+                    <div class="item flex snap-start justify-center items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Countryside.jpg" alt="Countryside">Countryside</p>
+                    </div>
+                    <div class="item flex justify-center items-center flex-col snap-start w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Tiny House.jpg" alt="Tiny House">Tiny Homes</p>
+                    </div>
+                    <div class="item flex justify-center snap-start items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/A-Fremes.jpg" alt="A-Fremes">A-Fremes</p>
+                    </div>
+                    <div class="item flex justify-center items-center snap-start flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Beachfront.jpg" alt="Beachfront">Beachfront</p>
+                    </div>
+                    <div class="item flex justify-center items-center snap-start flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/National Park.jpg" alt="National Park">National Park</p>
+                    </div>
+                    <div class="item flex justify-center snap-start items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Lake.jpg" alt="Lake">Lake</p>
+                    </div>
+                    <div class="item flex justify-center snap-start items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/New.jpg" alt="New">New</p>
+                    </div>
+                    <div class="item flex justify-center snap-start items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Rooms.jpg" alt="Rooms">Rooms</p>
+                    </div>
+                    <div class="item flex justify-center snap-start items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Caves.jpg" alt="Caves">Caves</p>
+                    </div>
+                    <div class="item flex justify-center snap-start items-center flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Top Cities.jpg" alt="Top Cities">Top Cities</p>
+                    </div>
+                    <div class="item flex justify-center items-center snap-start flex-col w-[100px]">
+                        <p class="font-light text-sm hover:font-bold flex flex-col items-center"><img class="w-8 opacity-50 hover:opacity-100" src="./Image/Camping.jpg" alt="Camping">Camping</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="card mx-10 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-1.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Open the Olympic Games at Musee d'Orsay</h1>
+                        <p>Hosted by Mathieu Lehanneur</p>
+                        <p>₹0 per guest</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-2.webp" alt="Core">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Make core memories with Inside Out 2</h1>
+                        <p>Hosted by Joyr</p>
+                        <p class="font-bold">Coming 18 June</p>
+                    </div>
+                </div>
+            
+                <!-- Repeat similar blocks for other card items -->
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-3.webp" alt="Prince's">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Stay in Prince's Purple Rain house</h1>
+                        <p>Hosted by Windy and Lisa</p>
+                        <p class="font-bold">Coming August</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-4.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Go VIP with Kevin Hart</h1>
+                        <p>Hosted by Kevin Hart</p>
+                        <p class="font-bold">Coming August</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-5.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Join a living room session Doja</h1>
+                        <p>Hosted by Doja Cat</p>
+                        <p class="font-bold">Coming October</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-6.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Train at the X-Mansion</h1>
+                        <p>Hosted by Jubilee</p>
+                        <p class="font-bold">Booking closed</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-7.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Wake up in the Musee d'Orsay</h1>
+                        <p>Hosted by Mathieu Lehanneur</p>
+                        <p class="font-bold">Sold out</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-8.jpeg" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Design your Incredibles Supersuit</h1>
+                        <p>Hosted by Edna Mode</p>
+                        <p class="font-bold">Sold out</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-9.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Crash at the X-Mansion</h1>
+                        <p>Hosted by Jubilee</p>
+                        <p class="font-bold">Sold out</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-10.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Live like Bollywood star Janhvi Kapoor</h1>
+                        <p>Hosted by Janhvi Kapoor</p>
+                        <p class="font-bold">Sold out</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-11.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Go on tour with Feid</h1>
+                        <p>Hosted by Feid</p>
+                        <p class="font-bold">Sold out</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-12.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Game with Khaby Lame</h1>
+                        <p>Hosted by Khaby Lame</p>
+                        <p class="font-bold">Sold out</p>
+                    </div>
+                </div>
+            
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-13.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Drift off in the Up house</h1>
+                        <p>Hosted by Cari Fredricksen</p>
+                        <p class="font-bold">Sold out</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text text-start font-bold text-3xl mx-10 mt-10 mb-5">Past experiences</div>
+
+            <div class="card mx-10 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-14.jpg" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Spend the night in the Ferrari Museum</h1>
+                        <p>Hosted by Marc Gener</p>
+                        <p>Sold out</p>
+                    </div>
+                </div>
+
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-15.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Shrek's Swamp</h1>
+                        <p>Hosted by Donkey</p>
+                        <p>Sold out</p>
+                    </div>
+                </div>
+
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-16.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Barbie's Malibu DreamHouse, Ken's Way</h1>
+                        <p>Hosted by Ken</p>
+                        <p>Sold out</p>
+                    </div>
+                </div>
+
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-17.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Ted Lasso's Favorite Pub</h1>
+                        <p>Hosted by Mae</p>
+                        <p>Sold out</p>
+                    </div>
+                </div>
+
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-18.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Houseplant Retreat</h1>
+                        <p>Hosted by Seth Rogen</p>
+                        <p>Sold out</p>
+                    </div>
+                </div>
+
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-19.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">Home Alone Holiday</h1>
+                        <p>Hosted by Buzz</p>
+                        <p>Sold out</p>
+                    </div>
+                </div>
+
+                <div class="card_item">
+                    <div class="image_element relative w-full h-64 sm:h-80 md:h-96 lg:h-[20rem] xl:h-[24rem]">
+                        <img class="w-full h-full rounded-xl object-cover" src="./Image/img-20.webp" alt="Olympic">
+                        <div class="Live rounded-full bg-gray-200 w-fit px-5 py-1 absolute top-4 left-4">Live</div>
+                        <div class="upload rounded-full bg-gray-300 w-[35px] h-[35px] absolute top-4 right-4 flex items-center justify-center">
+                            <img class="w-[25px] h-[25px] p-1" src="./Image/upload.png" alt="Upload">
+                        </div>
+                    </div>
+                    <div class="textD py-4">
+                        <h1 class="text-start font-bold">The Last Blockbuster</h1>
+                        <p>Hosted by Sandi</p>
+                        <p>Sold out</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer bg-[#f7f7f7] mt-10">
+                <div class="top mx-10 pt-10 border-b-2 border-slate-200">
+                    <h1 class="font-semibold text-2xl">Inspiration for future getaways</h1>
+                    <div class="list my-4 flex overflow-hidden">
+                        <p class="mr-10 w-fit hover:text-black hover:underline">Popular</p>
+                        <p class="mr-10 w-fit hover:text-black hover:underline">Arts & culture</p>
+                        <p class="mr-10 w-fit hover:text-black hover:underline">Outdoors</p>
+                        <p class="mr-10 w-fit hover:text-black hover:underline">Mountains</p>
+                        <p class="mr-10 w-fit hover:text-black hover:underline">Beach</p>
+                        <p class="mr-10 w-fit hover:text-black hover:underline">Unique stays</p>
+                        <p class="mr-10 w-fit hover:text-black hover:underline">Categories</p>
+                        <p class="mr-10 w-fit hover:text-black hover:underline">Things to do</p>
+                    </div>
+                </div>
+                <div class="items_list mx-10 my-5">
+                    <div class="item_type grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 md:gap-6 lg:grid-cols-6">
+                        <ul>
+                            <li class="mb-5">
+                                <p class="font-semibold">Canmore</p>
+                                <p class="text-gray-700">Pet-friendly rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Marbella</p>
+                                <p class="text-gray-700">Beachfront rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Prescott</p>
+                                <p class="text-gray-700">Cottage rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Tucson</p>
+                                <p class="text-gray-700">Rentals with pools</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="mb-5">
+                                <p class="font-semibold">Benalmadena</p>
+                                <p class="text-gray-700">Beach house rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Mijas</p>
+                                <p class="text-gray-700">Holiday rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Scottsdale</p>
+                                <p class="text-gray-700">Flat rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Mallacoota</p>
+                                <p class="text-gray-700">Holiday rentals</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="mb-5">
+                                <p class="font-semibold">Marbella</p>
+                                <p class="text-gray-700">Beachfront rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Mountain View</p>
+                                <p class="text-gray-700">Cabin rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Paso Robles</p>
+                                <p class="text-gray-700">House rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Mijas</p>
+                                <p class="text-gray-700">Holiday rentals</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="mb-5">
+                                <p class="font-semibold">Devonport</p>
+                                <p class="text-gray-700">Holiday rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Santa Barbara</p>
+                                <p class="text-gray-700">Beachfront rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Prescott</p>
+                                <p class="text-gray-700">Cottage rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Mallacoota</p>
+                                <p class="text-gray-700">Holiday rentals</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="mb-5">
+                                <p class="font-semibold">Sonoma</p>
+                                <p class="text-gray-700">Holiday rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Scottsdale</p>
+                                <p class="text-gray-700">Flat rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Ibiza</p>
+                                <p class="text-gray-700">Holiday rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Phoenix</p>
+                                <p class="text-gray-700">House rentals</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="mb-5">
+                                <p class="font-semibold">Prague</p>
+                                <p class="text-gray-700">Holiday rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">York</p>
+                                <p class="text-gray-700">Pet-friendly rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Hot Springs</p>
+                                <p class="text-gray-700">House rentals</p>
+                            </li>
+                            <li class="mb-5">
+                                <p class="font-semibold">Washington</p>
+                                <p class="text-gray-700">Holiday rentals</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="moreitem mx-10 border-t-2 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <ul>
+                        <li class=" font-semibold my-2">Support</li>
+                        <li class=" font-light my-2">Help Centre</li>
+                        <li class=" font-light my-2">AirCover</li>
+                        <li class=" font-light my-2">Anti-discrimination</li>
+                        <li class=" font-light my-2">Disability support</li>
+                        <li class=" font-light my-2">Cancellation options</li>
+                        <li class=" font-light my-2">Report neighbourhood concern</li>
+                    </ul>
+                    <ul>
+                        <li class=" font-semibold my-2">Hosting</li>
+                        <li class=" font-light my-2">Airbnb your home</li>
+                        <li class=" font-light my-2">AirCover for Hosts</li>
+                        <li class=" font-light my-2">Hosting resources</li>
+                        <li class=" font-light my-2">Community forum</li>
+                        <li class=" font-light my-2">Hosting responsibly</li>
+                        <li class=" font-light my-2">Join a free Hosting class</li>
+                    </ul>
+                    <ul>
+                        <li class=" font-semibold my-2">Airbnb</li>
+                        <li class=" font-light my-2">Newsroom</li>
+                        <li class=" font-light my-2">New features</li>
+                        <li class=" font-light my-2">Careers</li>
+                        <li class=" font-light my-2">Investors</li>
+                        <li class=" font-light my-2">Airbnb.org emergency stays</li>
+                    </ul>
+                </div>
+                <div class="end mx-5 py-5 flex justify-between items-center border-t-2">
+                    <div class="left flex justify-start items-center">
+                        <p class="font-light ml-5">&copy; Badal Sahoo</p>
+                        <p class="font-light ml-5">Privacy</p>
+                        <p class="font-light ml-5">Terms</p>
+                        <p class="font-light ml-5">Sitmap</p>
+                        <p class="font-light ml-5">Company details</p>
+                    </div>
+                    <div class="right flex justify-end items-center">
+                        <img class="w-[16px] h-[16px] mx-2" src="./Image/internet.png" alt="Global">
+                        <p class="mx-2 font-semibold mx-2">English (IN)</p>
+                        <p class="mx-2 font-semibold mx-2">₹ INR</p>
+                        <img class="w-[16px] h-[16px] mx-2" src="./Image/facebook.png" alt="facebook">
+                        <img class="w-[16px] h-[16px] mx-2" src="./Image/twitter-sign.png" alt="twitter">
+                        <img class="w-[16px] h-[16px] mx-2" src="./Image/instagram.png" alt="instagram">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+<script>
+    const headings = document.querySelectorAll(".exp h1");
+
+headings.forEach((heading) => {
+  heading.addEventListener("click", () => {
+    headings.forEach((h) => h.classList.remove("font-bold"));
+    heading.classList.add("font-bold");
+  });
+});
+document.getElementById('search-input').addEventListener('focus', function() {
+    document.getElementById('border-div').style.borderRight = 'none';
+});
+
+document.getElementById('search-input').addEventListener('blur', function() {
+    document.getElementById('border-div').style.borderRight = '2px solid #cbd5e1'; // Adjust to match your border color
+});
+document.querySelector('.left-arrow').addEventListener('click', () => {
+    document.querySelector('.carrousel').scrollBy({
+        left: -200,
+        behavior: 'smooth'
+    });
+});
+
+document.querySelector('.right-arrow').addEventListener('click', () => {
+    document.querySelector('.carrousel').scrollBy({
+        left: 200,
+        behavior: 'smooth'
+    });
+});
+
+</script>
+    
+</body>
+</html>
